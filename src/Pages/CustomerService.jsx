@@ -11,7 +11,7 @@ function App() {
     // Any logic you want to run on component mount/update
   }, []);
 
-  const MyApiKey = import.meta.env.api_key; 
+  const kunci = import.meta.env.api_key; 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + MyApiKey,
+          Authorization: "Bearer " + kunci,
         },
         body: JSON.stringify(APIBody),
       });
