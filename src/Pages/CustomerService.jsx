@@ -11,7 +11,7 @@ function App() {
     // Any logic you want to run on component mount/update
   }, []);
 
-  const API_KEY = import.meta.env.api_key; // sk-proj-qzeqrxvSOPUTHV89DBgGT3BlbkFJL0ouQ12cZ0dM7HnCCVPe
+  const API_KEY = import.meta.env.api_key; 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
