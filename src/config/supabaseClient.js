@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 
 export const supabase = createClient(
-  import.meta.env.VITE_REACT_APP_SUPABASE_URL,//'https://mntjomlaqduuwhlobyqf.supabase.co',
-  import.meta.env.VITE_REACT_APP_SUPABASE_ANON_KEY, //'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udGpvbWxhcWR1dXdobG9ieXFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ4MzA5NjIsImV4cCI6MjAzMDQwNjk2Mn0.-9rc11XrS0df2aKygrGzQYNYNjDtWwobFPXHtsXQ3DQ'
+  import.meta.env.VITE_REACT_APP_SUPABASE_URL,
+  import.meta.env.VITE_REACT_APP_SUPABASE_ANON_KEY,
 );
 
 //global variable
