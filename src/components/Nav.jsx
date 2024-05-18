@@ -65,7 +65,7 @@ const Nav = () => {
                 className="nav-link text-black hover:underline rounded-3xl "
                 href="#"
               >
-                Blog
+                About
               </a>
             </li>
             <li className="nav-list py-4 md:py-0">
@@ -73,7 +73,7 @@ const Nav = () => {
                 className="nav-link text-black hover:underline rounded-3xl "
                 href="#"
               >
-                About Us
+                Blog
               </a>
             </li>
             <hr className=" border-black" />

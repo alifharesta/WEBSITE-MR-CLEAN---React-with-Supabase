@@ -10,6 +10,7 @@ const Booking = () => {
   const [service, setService] = useState("");
   const navigate = useNavigate();
 
+  //insert data di form user
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(username, address, phone, service);
@@ -25,10 +26,9 @@ const Booking = () => {
     }
       console.log("Data inserted: ", data);
       navigate("/statususer");
-
-    
-
   };
+
+
   return (
     <section>
       <h1 className="text-3xl font-bold text-center mt-3">SERVICE OPTIONS</h1>
@@ -127,7 +127,7 @@ const Booking = () => {
         </label>
         <select
           required
-          onChange={(e) => setService(e.target.value)}
+          onInput ={(e) => setService(e.target.value)}
           className="select select-primary w-full max-w-xs mt-2"
         >
           <option value="Cleaning Houser">Cleaning House</option>

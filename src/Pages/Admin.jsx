@@ -9,6 +9,12 @@ import FormDashboard from "../components/FormDashboard";
 
 function DashboardAdmin() {
   const navigate = useNavigate();
+  const user = useState();
+  const tanggal = useState();
+  const jenis = useState();
+  const tugas = useState();
+  const status = useState();
+
   useEffect(() => {
     if (!User || User.user.email != "111202113768@mhs.dinus.ac.id") {
       return navigate("/");
@@ -20,8 +26,9 @@ function DashboardAdmin() {
     <section className="text-gray-600 body-font">
       <h1 className="text-2xl text-center mt-5 font-bold">DASHBOARD ADMIN Mr/s. Clean</h1>
       <FetchOrderUser />
-      <Fetching/>
-      <FormDashboard/>
+      {/* ini spreading */}
+      <Fetching {...{user,tanggal,jenis,tugas,status}}/> 
+      <FormDashboard user={user} tanggal={tanggal} jenis={jenis} tugas={tugas} status={status}/> 
     </section>
     </>
   );

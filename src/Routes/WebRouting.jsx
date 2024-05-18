@@ -9,6 +9,8 @@ import Booking from '../Pages/Booking';
 import Admin from '../Pages/Admin';
 import CustomerService from '../Pages/CustomerService';
 import StatusUser from '../Pages/StatusUser';
+import Updates from '../Pages/Updates';
+
 
 function Islogin (element) {
     const login = localStorage.getItem('login');
@@ -19,11 +21,8 @@ function Islogin (element) {
     }
     return element;
 }
-function WebRouting() {
 
-
-        
-    
+function WebRouting() {    
     return (
         <Router>
             <div>
@@ -36,6 +35,7 @@ function WebRouting() {
                     <Route path="/admin" element={<Admin />} />
                     <Route path="/service" element={<CustomerService />} />
                     <Route path="/statususer" element={<StatusUser />} />
+                    <Route path="/update/:username" element={<Updates />} />
 
                 </Routes>
             </div>

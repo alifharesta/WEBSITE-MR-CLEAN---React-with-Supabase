@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import OpenAI from "openai"; // Make sure the 'openai' package is installed
+import OpenAI from "openai";
 import Gambar from "../assets/cs.jpg";
 import { Link } from "react-router-dom";
 
@@ -7,14 +7,12 @@ function App() {
   const [respond, setRespond] = useState("");
   const [prompt, setPrompt] = useState("");
 
-  useEffect(() => {
-    // Any logic you want to run on component mount/update
-  }, []);
 
-  const kunci = import.meta.env.api_key; 
+  const API_KEY = import.meta.env.VITE_API_KEY; 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     const promptAwal =
       "Kamu adalah seorang customer service yang bertugas untuk memberikan informasi kepada user. User bertanya terkait layanan kebersihan yang disediakan oleh perusahaan. Berikut adalah informasi yang bisa saya berikan: ";
 
@@ -33,11 +31,12 @@ function App() {
     };
 
     try {
+      console.log(API_KEY);
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + kunci,
+          Authorization: "Bearer " + API_KEY,
         },
         body: JSON.stringify(APIBody),
       });

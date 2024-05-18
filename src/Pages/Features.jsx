@@ -38,7 +38,7 @@ export default function Features() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Features Cleaning Office and Firma</h2>
+            <h2 className="card-title mt-2">Features Cleaning Office and Firma</h2>
             <p>
               Dengan fokus pada kebersihan dan kenyamanan ruang kerja, layanan
               ini dirancang untuk kantor dan firma Anda. Tim profesional kami
@@ -59,7 +59,7 @@ export default function Features() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Features Cleaning Office and Firma</h2>
+            <h2 className="card-title">Features Cleaning Industry and Fabric</h2>
             <p>
               Kami menawarkan layanan kebersihan yang khusus di sektor industri
               dan pabrik. Tim ahli kami dilengkapi dengan pengetahuan dan
@@ -80,7 +80,7 @@ export default function Features() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Features Cleaning Office and Firma</h2>
+            <h2 className="card-title">Features Climbing Window Cleaning</h2>
             <p>
               Jika Anda membutuhkan layanan pembersihan jendela yang sulit
               dijangkau, kami siap membantu. Tim kami terlatih untuk melakukan

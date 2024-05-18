@@ -5,10 +5,10 @@ export const supabase = createClient(
   import.meta.env.VITE_REACT_APP_SUPABASE_ANON_KEY,
 );
 
-//global variable
+//Global Variable
 export let User = await supabase.auth.getSession().then((e) => e.data.session);
 
-//manggil api di supabase kalo dia eror muncul alert kalo dia berhasil set global vaiable user
+//manggil api di supabase kalo dia eror, muncul alert kalo dia berhasil set global vaiable user
 export const Login = async (email, password) => {
   const user = await supabase.auth.signInWithPassword({ email, password });
   if (user.error) {
@@ -40,6 +40,6 @@ export const Logout = async () => {
 //         password: "udinussemarang123"
 //     }
 //     )
-// }
+// }    
 
 export default supabase;

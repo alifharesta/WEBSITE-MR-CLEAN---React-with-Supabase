@@ -1,13 +1,10 @@
 // INI PAGE ADMIN DATA ORDER USER
 
-import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { supabase } from "../config/supabaseClient";
 
 const FetchOrderUser = () => {
-//   const navigate = useNavigate();
   const [orderuser, setOrderUser] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchOrderUser();
@@ -40,18 +37,16 @@ const FetchOrderUser = () => {
             </tr>
           </thead>
           <tbody>
-            {orderuser.map((orderuser) => (
+            {orderuser.map((orderuser, index) => ( 
               <tr key={orderuser.id}>
-                <td>{orderuser.id}</td>
+                <td>{index+1}</td>
                 <td>{orderuser.username}</td>
                 <td>{orderuser.address}</td>
                 <td>{orderuser.phone}</td>
                 <td>{orderuser.service}</td>
                 <td>
                   <span className="text-bold flex gap-3 text-2xl">
-                    {/* <Link to={"/admin" + orderuser.id}> */}
                       <i className="fi fi-tr-pen-square text-primary" />
-                    {/* </Link> */}
                   </span>
                 </td>
               </tr>
